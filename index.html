@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Auto-redirect after 3 seconds -->
-    <meta http-equiv="refresh" content="3; url=https://clickncollect.xo.je/clickcollect/public/">
-    <title>click&collect – Redirecting you</title>
+    <title>click&collect | Marketplace</title>
     <style>
         * {
             margin: 0;
@@ -100,32 +98,17 @@
             transform: translateY(0);
             box-shadow: 0 8px 16px -8px #1e2b38;
         }
-        .redirect-note {
+        .footer-note {
             margin-top: 40px;
             font-size: 1rem;
             color: #7f5e45;
-            background: rgba(255, 245, 235, 0.7);
-            padding: 12px 20px;
-            border-radius: 60px;
-            display: inline-block;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-        .redirect-note span {
-            font-weight: 600;
-            background: #2c3e50;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 40px;
-            margin-left: 8px;
-            font-size: 0.9rem;
         }
         footer {
             margin-top: 30px;
             font-size: 0.9rem;
             color: #a78972;
         }
-        /* optional placeholder if logo.png missing */
+        /* fallback if logo.png missing */
         .logo-placeholder {
             width: 120px;
             height: 120px;
@@ -154,13 +137,11 @@
         <h1>click&collect</h1>
         <div class="tagline">buy & sell · new & used</div>
 
-        <!-- Main button to go to the marketplace -->
+        <!-- Button that takes you to the marketplace only when clicked -->
         <a href="https://clickncollect.xo.je/clickcollect/public/" class="btn">🚀 Enter Marketplace</a>
 
-        <!-- Auto-redirect information -->
-        <div class="redirect-note">
-            ⏳ redirecting in <span>3s</span>
-            <noscript> (enable JavaScript for auto-redirect)</noscript>
+        <div class="footer-note">
+            click the button to start shopping or selling
         </div>
 
         <footer>
@@ -168,22 +149,6 @@
         </footer>
     </div>
 
-    <!-- optional script to update the second counter (just for show) -->
-    <script>
-        (function() {
-            const secondsSpan = document.querySelector('.redirect-note span');
-            if (!secondsSpan) return;
-            let seconds = 3;
-            const interval = setInterval(() => {
-                seconds -= 1;
-                if (seconds >= 0) {
-                    secondsSpan.textContent = seconds + 's';
-                }
-                if (seconds <= 0) {
-                    clearInterval(interval);
-                }
-            }, 1000);
-        })();
-    </script>
+    <!-- (No automatic redirect, no countdown) -->
 </body>
 </html>
